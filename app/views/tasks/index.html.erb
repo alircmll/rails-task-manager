@@ -1,0 +1,18 @@
+<h1>List of Tasks</h1>
+<%#= @tasks.inspect %>
+
+<ul>
+  <% @tasks.each do |task| %>
+  <%= link_to "Plus de détails", task_path(task.id)%>
+  <li><%= task.title %> :
+    <input name="task[completed]" type="checkbox" value="0" />
+  </li>
+  <% end %>
+</ul>
+<%= link_to "Créer une nouvelle task", tasks_new_path %>
+
+<!-- <input name="task[completed]" type="checkbox" value="1" /> -->
+<!-- <label for="pet_dog">I own a dog</label> -->
+<!-- <input  name="Ta" type="checkbox" value="1" />
+<label for="pet_cat">I own a cat</label>
+ -->
